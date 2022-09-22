@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Deduplicate fix_ulauncher_focus processes
+
+/usr/bin/kill -9 $(/usr/bin/ps ax \
+| /usr/bin/grep -e "bash .*/fix_ulauncher_focus" \
+| /usr/bin/grep -v grep \
+| sed -e 's/^[ ]*//g' \
+| /usr/bin/cut -d ' ' -f 1) 2>&1 >/dev/null
+
+fix_ulauncher_focus &

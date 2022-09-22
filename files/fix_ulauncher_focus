@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Fix focus problem with Ulauncher dialog
+
+while true
+  do
+    sleep 0.15
+    if [ "$(wmctrl -l | grep -c 'Ulauncher - Application Launcher')" = "1" ]
+      then
+        wmctrl -a "Ulauncher - Application Launcher"
+    fi
+done
+

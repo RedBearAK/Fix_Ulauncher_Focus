@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Fix Ulauncher Focus
+Comment=Bring keyboard focus to Ulauncher dialog
+Exec=/home/{username}/.local/bin/dedup_fix_ulauncher_focus
+Icon=ulauncher
+Terminal=false
+Categories=Utilities
